@@ -40,7 +40,7 @@ export default function Board() {
     return (
         <>
             <form action="https://bbttko.github.io">
-                <input type="submit" value="back to main">
+                <input type="submit" value="back to main"/>
             </form>
             <div className="status">{status}</div>
             <div className="board-row">
