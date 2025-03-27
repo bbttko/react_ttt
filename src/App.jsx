@@ -1,4 +1,6 @@
 import {useState} from 'react';
+import {useNavigate} from "react-router-dom";
+
 
 function Square({value, onSquareClick}) {
     return (
@@ -38,6 +40,7 @@ export default function Board() {
 
     return (
         <>
+            <button onClick={() => useNavigate(-1)}>Back</button>
             <div className="status">{status}</div>
             <div className="board-row">
                 <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
