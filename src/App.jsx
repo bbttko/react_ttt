@@ -14,6 +14,7 @@ function Square({value, onSquareClick}) {
 export default function Board() {
     const [xIsNext, setXIsNext] = useState(true);
     const [squares, setSquares] = useState( Array(9).fill(null) );
+    const navigate = useNavigate();
 
     const winner = calculateWinner(squares);
     let status;
@@ -40,7 +41,7 @@ export default function Board() {
 
     return (
         <>
-            <button onClick={() => useNavigate(-1)}>Back</button>
+            <button onClick={() => navigate(-1)}>Back</button>
             <div className="status">{status}</div>
             <div className="board-row">
                 <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
